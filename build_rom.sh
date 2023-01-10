@@ -1,14 +1,15 @@
 # sync rom
 repo init --depth=1 --no-repo-verify -u https://github.com/Bootleggers-BrokenLab/manifest.git -b tirimbino -g default,-mips,-darwin,-notdefault
-git clone https://github.com/donboruza/local_manifests.git --depth 1 -b btlg-13 .repo/local_manifests
+git clone https://github.com/baconpeedit/Local_Manifest.git --depth 1 -b bootleg .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
 source build/envsetup.sh
-lunch bootleg_sweet-userdebug
-export BUILD_USERNAME=don.boruza
-export BUILD_HOSTNAME=prototype
-export TZ=Asia/Jakarta
+lunch bootleg_ginkgo-userdebug
+export BUILD_USERNAME=Tejas
+export BUILD_HOSTNAME=Oracle
+export KBUILD_BUILD_NAME=Tejas
+export TZ=Asia/Delhi
 mka bacon
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
