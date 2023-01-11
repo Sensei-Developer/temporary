@@ -8,7 +8,6 @@ source build/envsetup.sh
 lunch bootleg_ginkgo-userdebug
 export BUILD_USERNAME=Tejas
 export BUILD_HOSTNAME=Oracle
-export KBUILD_BUILD_NAME=Tejas
 export TZ=Asia/Delhi
 mka bacon
 
