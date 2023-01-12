@@ -7,6 +7,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 source build/envsetup.sh
 lunch bootleg_ginkgo-userdebug
 export BUILD_USERNAME=Tejas
+export KBUILD_BUILD_NAME=Tejas
 export BUILD_HOSTNAME=Oracle
 export TZ=Asia/Delhi
 mka bacon
